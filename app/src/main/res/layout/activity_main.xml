@@ -48,7 +48,7 @@
         android:layout_height="50dp"
         android:layout_above="@+id/activity_main_btn_help"
         android:background="@color/greenPool"
-        android:text="Cadastrar"
+        android:text="Cadastrar Pet"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"

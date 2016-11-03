@@ -1,6 +1,7 @@
 package com.caykeprudente.meau;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,21 +23,30 @@ public class MainActivity extends AppCompatActivity {
         btn_adopt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //todo
+                Intent intent = new Intent(MainActivity.this, AppActivity.class);
+                intent.putExtra("initial_screen", getString(R.string.adopt_pet));
+                startActivity(intent);
+                finish();
             }
         });
 
         btn_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //todo
+                Intent intent = new Intent(MainActivity.this, AppActivity.class);
+                intent.putExtra("initial_screen", getString(R.string.help_pet));
+                startActivity(intent);
+                finish();
             }
         });
 
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //todo
+                Intent intent = new Intent(MainActivity.this, AppActivity.class);
+                intent.putExtra("initial_screen", getString(R.string.register_pet));
+                startActivity(intent);
+                finish();
             }
         });
     }
