@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Meau</string>
+
+    <string name="hello">Olá!</string>
+    <string name="bem_vindo">Bem vindo ao Meau!\nAqui voce pode adotar, doar e ajudar caes e gatos com facilidade.\nQual seu interesse?</string>
 </resources>
