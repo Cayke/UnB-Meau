@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -37,6 +38,16 @@ public class AdoptFragment extends Fragment {
 
         AdoptAdapter adapter = new AdoptAdapter();
         recyclerView.setAdapter(adapter);
+
+        ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+            @Override
+            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                if (mContext instanceof AppActivity) {
+                    AppActivity mainActivity = (AppActivity) mContext;
+                    mainActivity.switchToAnimalFragment();
+                }
+            }
+        });
 
         return view;
     }

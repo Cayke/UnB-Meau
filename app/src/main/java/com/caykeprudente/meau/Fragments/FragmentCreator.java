@@ -2,6 +2,7 @@ package com.caykeprudente.meau.Fragments;
 
 import android.support.v4.app.Fragment;
 
+import com.caykeprudente.meau.LoginActivity;
 import com.caykeprudente.meau.MyApplication;
 import com.caykeprudente.meau.R;
 

@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.View;
 
 import com.caykeprudente.meau.Fragments.AdoptFragment;
+import com.caykeprudente.meau.Fragments.AnimalFragment;
 import com.caykeprudente.meau.Fragments.FragmentCreator;
 
 import br.liveo.interfaces.OnItemClickListener;
@@ -89,10 +90,17 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
     public void onItemClick(int position) {
         FragmentManager mFragmentManager = getSupportFragmentManager();
         String screen = mHelpLiveo.get(position).getName();
-        Fragment mFragment = FragmentCreator.newInstance(screen);
 
-        if (mFragment != null){
-            mFragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
+        //todo apagar isso, era so pra poder mostrar o login
+        if (screen.equals(getString(R.string.my_profile))) {
+            Intent intent = new Intent(AppActivity.this, LoginActivity.class);
+            startActivity(intent);
+        } else {
+            Fragment mFragment = FragmentCreator.newInstance(screen);
+
+            if (mFragment != null) {
+                mFragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
+            }
         }
     }
 
@@ -115,4 +123,11 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
             closeDrawer();
         }
     };
+
+
+    public void switchToAnimalFragment() {
+        Fragment mFragment = AnimalFragment.newInstance("", "");
+        FragmentManager mFragmentManager = getSupportFragmentManager();
+        mFragmentManager.beginTransaction().replace(R.id.container, mFragment).addToBackStack(null).commit();
+    }
 }
