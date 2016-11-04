@@ -1,0 +1,329 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.caykeprudente.meau.AnimalFragment">
+
+    <ScrollView
+        android:id="@+id/sc_animal_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_animal_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="0pt"
+            android:paddingRight="0pt"
+            android:paddingBottom="10pt" >
+
+            <ImageView
+                android:id="@+id/img_animal"
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:src="@drawable/cachorro"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16pt"
+                android:paddingRight="16pt"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/animal_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Pequi"
+                    style="@style/animalName"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/animal_label_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="SEXO"
+                            style="@style/infoLabel"/>
+                        <TextView
+                            android:id="@+id/animal_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="Macho"
+                            style="@style/infoAnimal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/animal_label_porte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="PORTE"
+                            style="@style/infoLabel"/>
+                        <TextView
+                            android:id="@+id/animal_porte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="Pequeno"
+                            style="@style/infoAnimal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/animal_label_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="IDADE"
+                            style="@style/infoLabel"/>
+                        <TextView
+                            android:id="@+id/animal_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="Adulto"
+                            style="@style/infoAnimal"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/animal_label_loc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="LOCALIZAÇÃO"
+                    style="@style/infoLabel"/>
+                <TextView
+                    android:id="@+id/animal_loc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Planaltina - Brasília"
+                    style="@style/infoAnimal"/>
+
+                <View style="@style/divideRow" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/animal_label_castrado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="CASTRADO"
+                            style="@style/infoLabel"/>
+                        <TextView
+                            android:id="@+id/animal_castrado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="Não"
+                            style="@style/infoAnimal"/>
+
+                        <TextView
+                            android:id="@+id/animal_label_vacinado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="VACINADO"
+                            style="@style/infoLabel"/>
+                        <TextView
+                            android:id="@+id/animal_vacinado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="Não"
+                            style="@style/infoAnimal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/animal_label_vermifungado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="vermifungado"
+                            style="@style/infoLabel"/>
+                        <TextView
+                            android:id="@+id/animal_vermifungado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="Sim"
+                            style="@style/infoAnimal"/>
+
+                        <TextView
+                            android:id="@+id/animal_label_doencas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="doenças"
+                            style="@style/infoLabel"/>
+                        <TextView
+                            android:id="@+id/animal_doencas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="Nenhuma"
+                            style="@style/infoAnimal"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View style="@style/divideRow" />
+
+                <TextView
+                    android:id="@+id/animal_label_temperamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="temperamento"
+                    style="@style/infoLabel"/>
+                <TextView
+                    android:id="@+id/animal_temperamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brincalhão e amoroso"
+                    style="@style/infoAnimal"/>
+
+                <View style="@style/divideRow" />
+
+                <TextView
+                    android:id="@+id/animal_label_donoNecessidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="O dono precisa de"
+                    style="@style/infoLabel"/>
+                <TextView
+                    android:id="@+id/animal_donoNecessidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ajuda financeira e alimento"
+                    style="@style/infoAnimal"/>
+
+                <View style="@style/divideRow" />
+
+                <TextView
+                    android:id="@+id/animal_label_exigencias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Exigências do doador"
+                    style="@style/infoLabel"/>
+                <TextView
+                    android:id="@+id/animal_exigencias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Termo de apadrinhamento, auxílio financeiro com alimentação"
+                    style="@style/infoAnimal"/>
+
+                <View style="@style/divideRow" />
+
+                <TextView
+                    android:id="@+id/animal_label_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Mais sobre Pequi"
+                    style="@style/infoLabel"/>
+                <TextView
+                    android:id="@+id/animal_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pequi é um cão muito dócil e de fácil convicência. Adora caminhadas e se dá muito bem com crianças. Tem muito medo de raios e chuva. Está disponível para adoção pois eu e minha família o encontramos na rua e não podemos mantê-lo em nossa casa."
+                    style="@style/infoAnimal"/>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingRight="8pt">
+
+                        <Button
+                            android:id="@+id/chat"
+                            style="@style/animalBtn"
+                            android:text="Chat"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="8pt">
+
+                        <Button
+                            android:id="@+id/addRemoPet"
+                            style="@style/animalBtn"
+                            android:text="Remover Pet"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

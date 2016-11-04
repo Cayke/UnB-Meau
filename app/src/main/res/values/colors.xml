@@ -10,4 +10,6 @@
     <color name="lightGrayBackground">#F6F6F6</color>
     <color name="greenPool">#7EC3B8</color>
     <color name="white">#FFFFFF</color>
+
+    <color name="infoLabelYellow">#f7a800</color>
 </resources>

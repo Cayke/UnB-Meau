@@ -1,6 +1,5 @@
 package com.caykeprudente.meau;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     Button btn_adopt, btn_register, btn_help;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

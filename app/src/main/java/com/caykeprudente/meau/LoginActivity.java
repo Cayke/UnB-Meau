@@ -95,6 +95,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
+        Button registerButton = (Button) findViewById(R.id.register_button);
+        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //// TODO: 03/11/16
+                // Não entendi, aqui fica a chamada de uma activity para uma tela de registro,
+                // mas não entendi se vai ter essa tela.
+            }
+        });
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
