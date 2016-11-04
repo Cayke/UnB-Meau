@@ -8,6 +8,21 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="myTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FAFAFA</item>
+        <item name="colorPrimaryDark">#A9A9A9</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
+
+    <!--Here will be the theme of the class that will extends NavigationLiveo-->
+    <style name="nLiveoDrawer" parent="Theme.nLiveo">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/greenPool</item>
+        <item name="colorPrimaryDark">@color/greenPool</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
+
     <style name="infoLabel">
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
