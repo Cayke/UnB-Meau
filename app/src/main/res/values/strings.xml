@@ -22,4 +22,23 @@
     <string name="config">Configurações</string>
     <string name="privacity">Privacidade</string>
     <string name="exit">Sair</string>
+
+    <string name="title_activity_login">Login</string>
+
+    <!-- LOGIN -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">Fazer Login</string>
+    <string name="action_register_in">Não tenho cadastro</string>
+    <string name="action_sign_in_short">Login</string>
+    <string name="error_invalid_email">Este email é inválido</string>
+    <string name="error_invalid_password">A senha é muito curta</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
+    <string name="error_field_required">Este campo é obrigatório</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
