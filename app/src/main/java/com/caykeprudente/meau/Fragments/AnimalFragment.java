@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.caykeprudente.meau.R;
 
@@ -55,6 +56,7 @@ public class AnimalFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -65,7 +67,15 @@ public class AnimalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_animal, container, false);
+        final View view = inflater.inflate(R.layout.fragment_animal, container, false);
+
+        TextView aux;
+        aux = (TextView) view.findViewById(R.id.animal_desc);
+//        aux.setVisibility(View.GONE);
+        aux = (TextView) view.findViewById(R.id.animal_label_desc);
+//        aux.setVisibility(View.GONE);
+
+        return view;
     }
 
 //    // TODO: Rename method, update argument and hook method into UI event

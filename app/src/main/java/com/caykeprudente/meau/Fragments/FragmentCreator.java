@@ -18,6 +18,10 @@ public class FragmentCreator {
         {
             return new AdoptFragment();
         }
+        else if (screenName.equals("Cadastrar um pet"))
+        {
+            return new RegisterAnimalFragment();
+        }
         else
             return null;
     }

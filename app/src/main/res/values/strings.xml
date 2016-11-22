@@ -39,6 +39,15 @@
         completions."
     </string>
 
+    <!-- FRAGMENTO DE CADASTRO DE ANIMAL -->
+    <string name="start_title">Tenho interesse em cadastrar o animal para:</string>
+    <string name="adoption">Adoção</string>
+    <string name="apadrinhar">Apadrinhar</string>
+    <string name="help">Ajuda</string>
+    <string name="create">PROCURAR PADRINHO</string>
+
+    <string name="eba">Eba!</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

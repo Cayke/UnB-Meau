@@ -14,6 +14,7 @@ import android.view.View;
 import com.caykeprudente.meau.Fragments.AdoptFragment;
 import com.caykeprudente.meau.Fragments.AnimalFragment;
 import com.caykeprudente.meau.Fragments.FragmentCreator;
+import com.caykeprudente.meau.Fragments.RegisterAnimalFragment;
 
 import br.liveo.interfaces.OnItemClickListener;
 import br.liveo.interfaces.OnPrepareOptionsMenuLiveo;
@@ -95,6 +96,13 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
         if (screen.equals(getString(R.string.my_profile))) {
             Intent intent = new Intent(AppActivity.this, LoginActivity.class);
             startActivity(intent);
+        } else if (screen.equals("Cadastrar um pet")) {
+            Fragment mFragment = FragmentCreator.newInstance(screen);
+
+            if (mFragment != null) {
+                ((RegisterAnimalFragment) mFragment).mainFragmentManager = mFragmentManager;
+                mFragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
+            }
         } else {
             Fragment mFragment = FragmentCreator.newInstance(screen);
 
