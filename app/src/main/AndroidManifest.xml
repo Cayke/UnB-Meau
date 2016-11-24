@@ -34,13 +34,13 @@
 
         <!--Theme of the class that will extends NavigationLiveo-->
         <activity android:name=".AppActivity"
-            android:theme="@style/nLiveoDrawer">
+            android:theme="@style/adoptTheme">
         </activity>
 
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/nLiveoDrawer"
+            android:theme="@style/adoptTheme"
             >
         </activity>
     </application>

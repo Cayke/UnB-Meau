@@ -20,10 +20,10 @@
     </style>
 
     <!--Here will be the theme of the class that will extends NavigationLiveo-->
-    <style name="nLiveoDrawer" parent="Theme.nLiveo">
+    <style name="adoptTheme" parent="Theme.nLiveo">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/greenPoolColor</item>
-        <item name="colorPrimaryDark">@color/greenPoolColor</item>
+        <item name="colorPrimary">@color/yellowColor</item>
+        <item name="colorPrimaryDark">@color/yellowFireColor</item>
         <item name="colorAccent">#FF4081</item>
     </style>
 

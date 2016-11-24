@@ -7,10 +7,12 @@
     
     
     <color name="yellowColor">#ffd358</color>
+    <color name="yellowFireColor">#F69E02</color>
+    <color name="lightYellowColor">#fee29b</color>
     <color name="black_75">#757575</color>
     <color name="black_43">#434343</color>
     <color name="blackColor">#646464</color>
-    <color name="lightGrayBackgroundColor">#F6F6F6</color>
+    <color name="lightGrayBackgroundColor">#FAFAFA</color>
     <color name="greenPoolColor">#7EC3B8</color>
     <color name="whiteColor">#FFFFFF</color>
 

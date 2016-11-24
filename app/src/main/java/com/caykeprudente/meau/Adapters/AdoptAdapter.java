@@ -1,8 +1,5 @@
 package com.caykeprudente.meau.Adapters;
 
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +8,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.caykeprudente.meau.Models.ImageWrapper;
 import com.caykeprudente.meau.Models.Pet;
 import com.caykeprudente.meau.MyApplication;
 import com.caykeprudente.meau.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -68,8 +65,8 @@ public class AdoptAdapter extends RecyclerView.Adapter {
 
         public void setData(int image, Boolean liked, String name, String sex, String age, String size, String location)
         {
-            imageView.setImageBitmap(
-                    ImageWrapper.decodeSampledBitmapFromResource(MyApplication.getAppContext().getResources(), image, 344, 184));
+            Picasso.with(MyApplication.getAppContext()).load(image).resize(344,184).into(imageView);
+
             if (liked)
                 button.setImageResource(R.drawable.ic_favorite_black_48dp);
             else

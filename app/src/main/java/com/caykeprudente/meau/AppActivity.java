@@ -4,14 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.View;
 
-import com.caykeprudente.meau.Fragments.AdoptFragment;
 import com.caykeprudente.meau.Fragments.AnimalFragment;
 import com.caykeprudente.meau.Fragments.FragmentCreator;
 import com.caykeprudente.meau.Fragments.RegisterAnimalFragment;
@@ -77,7 +72,7 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
         //with(this, Navigation.THEME_DARK). add theme dark
         //with(this, Navigation.THEME_LIGHT). add theme light
 
-        with(this, Navigation.THEME_DARK) // default theme is dark
+        with(this, Navigation.THEME_LIGHT) // default theme is dark
                 .startingPosition(position) //Starting position in the list
                 .addAllHelpItem(mHelpLiveo.getHelp())
                 .footerItem(getString(R.string.exit), R.drawable.exit)
