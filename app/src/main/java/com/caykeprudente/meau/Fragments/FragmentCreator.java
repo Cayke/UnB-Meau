@@ -2,7 +2,6 @@ package com.caykeprudente.meau.Fragments;
 
 import android.support.v4.app.Fragment;
 
-import com.caykeprudente.meau.LoginActivity;
 import com.caykeprudente.meau.MyApplication;
 import com.caykeprudente.meau.R;
 
@@ -15,13 +14,17 @@ public class FragmentCreator {
     public static Fragment newInstance(String screenName)
     {
         if (screenName.equals(MyApplication.getAppContext().getString(R.string.adopt_pet)))
-        {
             return new AdoptFragment();
-        }
-        else if (screenName.equals("Cadastrar um pet"))
-        {
+
+        else if (screenName.equals(MyApplication.getAppContext().getString(R.string.register_pet)))
             return new RegisterAnimalFragment();
-        }
+
+        else if (screenName.equals(MyApplication.getAppContext().getString(R.string.help_pet)))
+            return new HelpFragment();
+
+        else if (screenName.equals(MyApplication.getAppContext().getString(R.string.apadrinhar_pet)))
+            return new PatronizeFragment();
+
         else
             return null;
     }

@@ -9,7 +9,6 @@ import android.view.View;
 
 import com.caykeprudente.meau.Fragments.AnimalFragment;
 import com.caykeprudente.meau.Fragments.FragmentCreator;
-import com.caykeprudente.meau.Fragments.RegisterAnimalFragment;
 
 import br.liveo.interfaces.OnItemClickListener;
 import br.liveo.interfaces.OnPrepareOptionsMenuLiveo;
@@ -39,7 +38,7 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
         // User Information
         this.userName.setText("Cayke Prudente");
         this.userEmail.setText("cayke10@gmail.com");
-        this.userPhoto.setImageResource(R.drawable.user_male);
+        this.userPhoto.setImageResource(R.drawable.user_image);
         this.userBackground.setImageResource(R.drawable.ic_user_background_first);
 
         // Creating items navigation
@@ -50,23 +49,23 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
         mHelpLiveo.addSeparator();
 
         mHelpLiveo.addSubHeader(getString(R.string.shortcut));
-        mHelpLiveo.add(getString(R.string.register_pet), R.drawable.help);
-        mHelpLiveo.add(getString(R.string.adopt_pet), R.drawable.help);
-        mHelpLiveo.add(getString(R.string.help_pet), R.drawable.help);
-        mHelpLiveo.add(getString(R.string.apadrinhar_pet), R.drawable.help);
-        mHelpLiveo.add(getString(R.string.chat), R.drawable.help);
+        mHelpLiveo.add(getString(R.string.register_pet), R.drawable.icon_register);
+        mHelpLiveo.add(getString(R.string.adopt_pet), R.drawable.icon_adopt);
+        mHelpLiveo.add(getString(R.string.help_pet), R.drawable.icon_help);
+        mHelpLiveo.add(getString(R.string.apadrinhar_pet), R.drawable.icon_apadrinhar);
+        mHelpLiveo.add(getString(R.string.chat), R.drawable.icon_chat);
         mHelpLiveo.addSeparator();
 
         mHelpLiveo.addSubHeader(getString(R.string.info));
-        mHelpLiveo.add(getString(R.string.tips_row), R.drawable.help);
-        mHelpLiveo.add(getString(R.string.events), R.drawable.help);
-        mHelpLiveo.add(getString(R.string.legislation), R.drawable.help);
-        mHelpLiveo.add(getString(R.string.terms), R.drawable.help);
-        mHelpLiveo.add(getString(R.string.history), R.drawable.help);
+        mHelpLiveo.add(getString(R.string.tips_row), R.drawable.icon_tip);
+        mHelpLiveo.add(getString(R.string.events), R.drawable.icon_event);
+        mHelpLiveo.add(getString(R.string.legislation), R.drawable.icon_law);
+        mHelpLiveo.add(getString(R.string.terms), R.drawable.icon_term);
+        mHelpLiveo.add(getString(R.string.history), R.drawable.icon_story);
         mHelpLiveo.addSeparator();
 
         mHelpLiveo.addSubHeader(getString(R.string.config));
-        mHelpLiveo.add(getString(R.string.privacity), R.drawable.help);
+        mHelpLiveo.add(getString(R.string.privacity), R.drawable.icon_privacy);
         mHelpLiveo.addSeparator();
 
         //with(this, Navigation.THEME_DARK). add theme dark
@@ -91,14 +90,8 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
         if (screen.equals(getString(R.string.my_profile))) {
             Intent intent = new Intent(AppActivity.this, LoginActivity.class);
             startActivity(intent);
-        } else if (screen.equals("Cadastrar um pet")) {
-            Fragment mFragment = FragmentCreator.newInstance(screen);
-
-            if (mFragment != null) {
-                ((RegisterAnimalFragment) mFragment).mainFragmentManager = mFragmentManager;
-                mFragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
-            }
-        } else {
+        }
+        else {
             Fragment mFragment = FragmentCreator.newInstance(screen);
 
             if (mFragment != null) {
@@ -132,5 +125,15 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
         Fragment mFragment = AnimalFragment.newInstance("", "");
         FragmentManager mFragmentManager = getSupportFragmentManager();
         mFragmentManager.beginTransaction().replace(R.id.container, mFragment).addToBackStack(null).commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        int backStackEntryCount = getSupportFragmentManager().getBackStackEntryCount();
+        if (backStackEntryCount == 0) {
+            //do nothing
+        } else {
+            super.onBackPressed();
+        }
     }
 }

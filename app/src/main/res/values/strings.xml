@@ -13,7 +13,7 @@
     <string name="help_pet">Ajudar um pet</string>
     <string name="apadrinhar_pet">Apadrinhar um pet</string>
     <string name="chat">Chat</string>
-    <string name="info">Informaçoes</string>
+    <string name="info">Informações</string>
     <string name="tips_row">Dicas</string>
     <string name="events">Eventos</string>
     <string name="legislation">Legislação</string>
@@ -21,7 +21,7 @@
     <string name="history">Histórias de adoção</string>
     <string name="config">Configurações</string>
     <string name="privacity">Privacidade</string>
-    <string name="exit">Sair</string>
+    <string name="exit">Desconectar Conta</string>
 
     <string name="title_activity_login">Login</string>
 
