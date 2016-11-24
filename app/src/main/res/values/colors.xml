@@ -6,11 +6,13 @@
     <color name="textColorPrimary">#7EC3B8</color>
     
     
-    <color name="yellow">#FDC851</color>
-    <color name="black">#646464</color>
-    <color name="lightGrayBackground">#F6F6F6</color>
-    <color name="greenPool">#7EC3B8</color>
-    <color name="white">#FFFFFF</color>
+    <color name="yellowColor">#ffd358</color>
+    <color name="black_75">#757575</color>
+    <color name="black_43">#434343</color>
+    <color name="blackColor">#646464</color>
+    <color name="lightGrayBackgroundColor">#F6F6F6</color>
+    <color name="greenPoolColor">#7EC3B8</color>
+    <color name="whiteColor">#FFFFFF</color>
 
     <color name="infoLabelYellow">#f7a800</color>
 </resources>

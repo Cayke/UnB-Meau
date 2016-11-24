@@ -21,7 +21,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
-                android:background="@color/yellow"
+                android:background="@color/yellowColor"
                 >
 
                 <TextView
