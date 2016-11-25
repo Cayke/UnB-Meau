@@ -1,5 +1,7 @@
 package com.caykeprudente.meau.Models;
 
+import android.support.v4.content.res.TypedArrayUtils;
+
 import com.caykeprudente.meau.R;
 
 import java.util.ArrayList;
@@ -12,11 +14,14 @@ import java.util.List;
 public class MainData {
 
     private List<Pet> pets;
+    private List<Pet> petsCreated;
 
     private static MainData instance = null;
 
     private MainData() {
         // Exists only to defeat instantiation.
+        generatePets();
+        petsCreated = new ArrayList<>();
     }
     public static MainData getInstance() {
         if(instance == null) {
@@ -44,16 +49,14 @@ public class MainData {
 
     public List<Pet> getPetsForAdopt()
     {
-        if (pets == null)
-            generatePets();
-
-        return pets;
+        ArrayList rArray = new ArrayList();
+        rArray.addAll(petsCreated);
+        rArray.addAll(pets);
+        return rArray;
     }
 
     public List<Pet> getPetsForHelp()
     {
-        if (pets == null)
-            generatePets();
 
         List<Pet> array = new ArrayList();
         array.add(pets.get(3));
@@ -72,8 +75,6 @@ public class MainData {
 
     public List<Pet> getPetsForApadrinhar()
     {
-        if (pets == null)
-            generatePets();
 
         List<Pet> array = new ArrayList();
         array.add(pets.get(6));
@@ -92,8 +93,6 @@ public class MainData {
 
     public List<Pet> getFavoritePets()
     {
-        if (pets == null)
-            generatePets();
 
         List<Pet> array = new ArrayList();
         for (Pet pet : pets)
@@ -104,4 +103,53 @@ public class MainData {
 
         return array;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void pushPet(Pet pet) {
+        petsCreated.add(pet);
+    }
+
+
 }

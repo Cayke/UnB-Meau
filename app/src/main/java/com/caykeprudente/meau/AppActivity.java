@@ -62,10 +62,10 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
 
         mHelpLiveo.addSubHeader(getString(R.string.info));
         mHelpLiveo.add(getString(R.string.tips_row), R.drawable.icon_tip);
-        mHelpLiveo.add(getString(R.string.events), R.drawable.icon_event);
+        //mHelpLiveo.add(getString(R.string.events), R.drawable.icon_event);
         mHelpLiveo.add(getString(R.string.legislation), R.drawable.icon_law);
         mHelpLiveo.add(getString(R.string.terms), R.drawable.icon_term);
-        mHelpLiveo.add(getString(R.string.history), R.drawable.icon_story);
+        //mHelpLiveo.add(getString(R.string.history), R.drawable.icon_story);
         mHelpLiveo.addSeparator();
 
 //        mHelpLiveo.addSubHeader(getString(R.string.config));

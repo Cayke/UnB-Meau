@@ -20,6 +20,8 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.caykeprudente.meau.AppActivity;
+import com.caykeprudente.meau.Models.MainData;
+import com.caykeprudente.meau.Models.Pet;
 import com.caykeprudente.meau.R;
 
 
@@ -192,6 +194,8 @@ public class RegisterAnimalFragment extends Fragment {
         // ignorando as fotos
         // TODO: 22/11/16 inserir dados do animal em um documento
         // TODO: 22/11/16 inserir documento em um array
+        Pet newPet = new Pet(nome, genero, idade, porte, "", R.drawable.toto, true, especie);
+        MainData.getInstance().pushPet(newPet);
 
         // trocar fragment para sucesso!
         mainFragmentManager.beginTransaction().replace(R.id.container, new SuccessRegisterFragment()).commit();
