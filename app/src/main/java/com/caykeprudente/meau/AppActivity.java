@@ -9,6 +9,9 @@ import android.view.View;
 
 import com.caykeprudente.meau.Fragments.AnimalFragment;
 import com.caykeprudente.meau.Fragments.FragmentCreator;
+import com.caykeprudente.meau.Fragments.LegislacaoFragment;
+import com.caykeprudente.meau.Fragments.RegisterAnimalFragment;
+import com.caykeprudente.meau.Fragments.TermoAdocaoFragment;
 import com.caykeprudente.meau.Models.Pet;
 
 import br.liveo.interfaces.OnItemClickListener;
@@ -91,6 +94,28 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
         if (screen.equals(getString(R.string.my_profile))) {
             Intent intent = new Intent(AppActivity.this, LoginActivity.class);
             startActivity(intent);
+        }
+        else if (screen.equals("Cadastrar um pet")) {
+            Fragment mFragment = FragmentCreator.newInstance(screen);
+
+            if (mFragment != null) {
+                ((RegisterAnimalFragment) mFragment).mainFragmentManager = mFragmentManager;
+                mFragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
+            }
+        } else if (screen.equals("Termo de adoção")) {
+            Fragment mFragment = FragmentCreator.newInstance(screen);
+
+            if (mFragment != null) {
+                ((TermoAdocaoFragment) mFragment).mainFragmentManager = mFragmentManager;
+                mFragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
+            }
+        } else if (screen.equals("Legislação")) {
+            Fragment mFragment = FragmentCreator.newInstance(screen);
+
+            if (mFragment != null) {
+                ((LegislacaoFragment) mFragment).mainFragmentManager = mFragmentManager;
+                mFragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
+            }
         }
         else {
             Fragment mFragment = FragmentCreator.newInstance(screen);
