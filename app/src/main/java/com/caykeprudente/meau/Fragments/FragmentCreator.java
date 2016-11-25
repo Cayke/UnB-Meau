@@ -31,6 +31,9 @@ public class FragmentCreator {
         else if (screenName.equals(MyApplication.getAppContext().getString(R.string.favorties)))
             return new FavoriteFragment();
 
+        else if (screenName.equals(MyApplication.getAppContext().getString(R.string.my_pets)))
+            return new MyPetsFragment();
+
         else
             return null;
     }

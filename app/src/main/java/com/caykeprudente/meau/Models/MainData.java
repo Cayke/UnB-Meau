@@ -34,7 +34,7 @@ public class MainData {
 
         pets.add(new Pet("Margot", "Fêmea", "Idosa", "Grande", "Lago Sul - DF", R.drawable.margot, false, "Dog"));
         pets.add(new Pet("Marie", "Fêmea", "Adulta", "Médio", "Sudoeste - DF", R.drawable.marie, false, "Cat"));
-        pets.add(new Pet("Sanco", "Macho", "Adulto", "Grande", "Guará - DF", R.drawable.sancho, false, "Dog"));
+        pets.add(new Pet("Sanco", "Macho", "Adulto", "Grande", "Guará - DF", R.drawable.sancho, true, "Dog"));
 
         pets.add(new Pet("Toto", "Macho", "Filhote", "Pequeno", "Taguatinga - DF", R.drawable.toto, false, "Dog"));
         pets.add(new Pet("Rex", "Macho", "Adulto", "Pequeno", "Nucleo Bandeirante - DF", R.drawable.rex, false, "Dog"));
