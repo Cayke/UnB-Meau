@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/lightGrayBackgroundColor"
     tools:context="com.caykeprudente.meau.LoginActivity">
 
     <!-- Login progress -->
@@ -28,7 +29,8 @@
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -64,20 +66,36 @@
             <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_width="232dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="52dp"
                 android:text="@string/action_sign_in"
-                android:textStyle="bold" />
+                android:textColor="@color/black_43"
+
+                android:background="@drawable/rounded_button_green"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+
+                android:textColor="@color/black_75"
+                android:text="Nao possui cadastro? Cadastre-se agora."
+                />
 
             <Button
                 android:id="@+id/register_button"
                 style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="232dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_register_in"
-                android:textStyle="bold" />
+                android:textColor="@color/black_43"
+                android:textSize="14sp"
+                android:background="@drawable/rounded_button_green"
+
+                />
 
         </LinearLayout>
     </ScrollView>

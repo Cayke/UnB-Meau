@@ -28,8 +28,8 @@
     <!-- LOGIN -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Senha</string>
-    <string name="action_sign_in">Fazer Login</string>
-    <string name="action_register_in">Não tenho cadastro</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_register_in">Cadastrar</string>
     <string name="action_sign_in_short">Login</string>
     <string name="error_invalid_email">Este email é inválido</string>
     <string name="error_invalid_password">A senha é muito curta</string>

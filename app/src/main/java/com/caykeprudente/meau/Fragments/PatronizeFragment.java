@@ -33,7 +33,7 @@ public class PatronizeFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(llm);
 
-        AdoptAdapter adapter = new AdoptAdapter();
+        AdoptAdapter adapter = new AdoptAdapter(AdoptAdapter.InitAnimalsFrom.apadrinhar);
         recyclerView.setAdapter(adapter);
 
         ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {

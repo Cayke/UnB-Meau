@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.caykeprudente.meau.Models.MainData;
 import com.caykeprudente.meau.Models.Pet;
 import com.caykeprudente.meau.MyApplication;
 import com.caykeprudente.meau.R;
@@ -20,11 +21,30 @@ import java.util.List;
  */
 
 public class AdoptAdapter extends RecyclerView.Adapter {
+    public enum InitAnimalsFrom{
+        adopt, apadrinhar, help, favorites
+    }
+
     List<Pet> pets;
 
-    public AdoptAdapter ()
+    public AdoptAdapter (InitAnimalsFrom screen)
     {
-        pets = Pet.generatePets();
+        if (screen == InitAnimalsFrom.adopt)
+        {
+            pets = MainData.getInstance().getPetsForAdopt();
+        }
+        else if (screen == InitAnimalsFrom.apadrinhar)
+        {
+            pets = MainData.getInstance().getPetsForApadrinhar();
+        }
+        else if (screen == InitAnimalsFrom.help)
+        {
+            pets = MainData.getInstance().getPetsForHelp();
+        }
+        else if (screen == InitAnimalsFrom.favorites)
+        {
+            pets = MainData.getInstance().getFavoritePets();
+        }
     }
 
     @Override
@@ -43,7 +63,7 @@ public class AdoptAdapter extends RecyclerView.Adapter {
         Pet pet = pets.get(position);
 
         AdoptViewHolder mHolder = (AdoptViewHolder) holder;
-        mHolder.setData(pet.getImageResource(), pet.getLiked(), pet.getName(), pet.getSex(), pet.getAge(), pet.getSize(), pet.getLocation());
+        mHolder.setData(pet);
     }
 
     public class AdoptViewHolder extends RecyclerView.ViewHolder {
@@ -63,20 +83,36 @@ public class AdoptAdapter extends RecyclerView.Adapter {
             location_tv = (TextView) itemView.findViewById(R.id.adopt_fragment_cell_location_text_view);
         }
 
-        public void setData(int image, Boolean liked, String name, String sex, String age, String size, String location)
+        public void setData(final Pet pet)
         {
-            Picasso.with(MyApplication.getAppContext()).load(image).resize(344,184).into(imageView);
+            Picasso.with(MyApplication.getAppContext()).load(pet.getImageResource()).resize(344,184).into(imageView);
 
-            if (liked)
+            if (pet.getLiked())
                 button.setImageResource(R.drawable.ic_favorite_black_48dp);
             else
                 button.setImageResource(R.drawable.ic_favorite_border_black_48dp);
 
-            name_tv.setText(name);
-            sex_tv.setText(sex);
-            age_tv.setText(age);
-            size_tv.setText(size);
-            location_tv.setText(location);
+            name_tv.setText(pet.getName());
+            sex_tv.setText(pet.getSex());
+            age_tv.setText(pet.getAge());
+            size_tv.setText(pet.getSize());
+            location_tv.setText(pet.getLocation());
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (pet.getLiked())
+                    {
+                        pet.setLiked(false);
+                        button.setImageResource(R.drawable.ic_favorite_border_black_48dp);
+                    }
+                    else
+                    {
+                        pet.setLiked(true);
+                        button.setImageResource(R.drawable.ic_favorite_black_48dp);
+                    }
+                }
+            });
         }
     }
 }

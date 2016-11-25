@@ -28,6 +28,9 @@ public class FragmentCreator {
         else if (screenName.equals(MyApplication.getAppContext().getString(R.string.chat)))
             return new ChatFragment();
 
+        else if (screenName.equals(MyApplication.getAppContext().getString(R.string.favorties)))
+            return new FavoriteFragment();
+
         else
             return null;
     }

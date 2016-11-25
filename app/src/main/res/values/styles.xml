@@ -19,6 +19,16 @@
         <item name="colorAccent">#FF4081</item>
     </style>
 
+    <style name="loginTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/greenActionBarColor</item>
+        <item name="colorPrimaryDark">@color/darkGreenColor</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/greenButtonColor</item>
+        <item name="colorControlHighlight">@color/greenButtonColor</item>
+    </style>
+
     <!--Here will be the theme of the class that will extends NavigationLiveo-->
     <style name="adoptTheme" parent="Theme.nLiveo">
         <!-- Customize your theme here. -->

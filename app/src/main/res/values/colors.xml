@@ -14,6 +14,9 @@
     <color name="blackColor">#646464</color>
     <color name="lightGrayBackgroundColor">#FAFAFA</color>
     <color name="greenPoolColor">#7EC3B8</color>
+    <color name="greenButtonColor">#88c9bf</color>
+    <color name="darkGreenColor">#589b9b</color>
+    <color name="greenActionBarColor">#cfe9e5</color>
     <color name="whiteColor">#FFFFFF</color>
 
     <color name="infoLabelYellow">#f7a800</color>

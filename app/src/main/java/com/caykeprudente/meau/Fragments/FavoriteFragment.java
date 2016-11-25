@@ -15,17 +15,17 @@ import com.caykeprudente.meau.AppActivity;
 import com.caykeprudente.meau.R;
 
 /**
- * Created by cayke on 03/11/16.
+ * Created by cayke on 24/11/16.
  */
 
-public class AdoptFragment extends Fragment {
+public class FavoriteFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.adopt_fragment, container, false);
 
         final Context mContext = view.getContext();
-        ((AppActivity) getActivity()).getSupportActionBar().setTitle("Adotar");
+        ((AppActivity) getActivity()).getSupportActionBar().setTitle("Favoritos");
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.adopt_fragment_recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -33,7 +33,7 @@ public class AdoptFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(llm);
 
-        AdoptAdapter adapter = new AdoptAdapter(AdoptAdapter.InitAnimalsFrom.adopt);
+        AdoptAdapter adapter = new AdoptAdapter(AdoptAdapter.InitAnimalsFrom.favorites);
         recyclerView.setAdapter(adapter);
 
         ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
