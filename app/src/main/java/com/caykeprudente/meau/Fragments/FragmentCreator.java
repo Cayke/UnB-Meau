@@ -34,6 +34,15 @@ public class FragmentCreator {
         else if (screenName.equals(MyApplication.getAppContext().getString(R.string.my_pets)))
             return new MyPetsFragment();
 
+        else if (screenName.equals("Termo de adoção"))
+            return new TermoAdocaoFragment();
+
+        else if (screenName.equals("Legislação"))
+            return new LegislacaoFragment();
+
+        else if (screenName.equals("Dicas"))
+            return new DicasFragment();
+
         else
             return null;
     }

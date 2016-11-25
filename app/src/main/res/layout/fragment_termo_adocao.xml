@@ -1,0 +1,90 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#fafafa"
+tools:context="com.caykeprudente.meau.Fragments.TermoAdocaoFragment">
+
+    <ScrollView
+        android:id="@+id/sc_animal_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/termo_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/termo_adocao1"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="14dp"
+                android:textColor="#757575"
+                android:fontFamily="sans-serif"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/termo_adocao2"
+                android:layout_marginBottom="20dp"
+                android:textSize="14dp"
+                android:textColor="#757575"
+                android:fontFamily="sans-serif"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/termo_adocao3"
+                android:layout_marginBottom="20dp"
+                android:textSize="14dp"
+                android:textColor="#757575"
+                android:fontFamily="sans-serif"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/termo_adocao4"
+                android:layout_marginBottom="20dp"
+                android:textSize="14dp"
+                android:textColor="#757575"
+                android:fontFamily="sans-serif"
+                />
+            
+            <Button
+                android:id="@+id/but_term_ado"
+                android:layout_width="232dp"
+                android:layout_height="40dp"
+                android:text="TERMO DE ADOÇAO"
+                android:layout_marginBottom="8dp"
+                android:textSize="12dp"
+                android:textColor="#434343"
+                android:fontFamily="sans-serif"
+                android:background="#88c9bf"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/but_term_apa"
+                android:layout_width="232dp"
+                android:layout_height="40dp"
+                android:text="TERMO DE APADRINHAMENTO"
+                android:layout_marginBottom="24dp"
+                android:textSize="12dp"
+                android:textColor="#434343"
+                android:fontFamily="sans-serif"
+                android:background="#88c9bf"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

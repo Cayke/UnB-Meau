@@ -48,6 +48,45 @@
 
     <string name="eba">Eba!</string>
 
+    <string name="termo_adocao1">
+        O termo de adoção é um termo que oficializa o processo de adoção de um animal. Similarmente funciona o termo de apadrinhamento.
+    </string>
+
+    <string name="termo_adocao2">
+        É importante que o doador/dono exija a assinatura deste termo por parte do adotante/padrinho, de forma a ter prova legal de
+        que a pessoa adquiriu o animal. Assim, podem ser tomadas providências legais em caso de maus tratos ou negligência ao animal.
+    </string>
+
+    <string name="termo_adocao3">
+        Para facilitar o processo, o Meau disponibiliza o termo aos seus doadores e donos de animais que utilizam o aplicativo para
+        encontrar um destino e/ou ajuda para seu bichinho. Este termo é enviado por e-mail para que possa ser feita a impressão e, no
+        momento de entrega do animal (ou quando o padrinho vai conhecê-lo), seja feita a assinatura por parte do adotante/padrinho.
+    </string>
+
+    <string name="termo_adocao4">
+        Pressionando os botões abaixo, você receberá em seu email o termo em questão, nos formatos .doc (word) e .pdf.
+    </string>
+
+    <string name="legisla1">
+        Lei nº 14.483, de 16 de julho de 2007
+    </string>
+
+    <string name="legisla2">
+        CAPÍTULO II - DAS DOAÇÕES
+    </string>
+
+    <string name="legisla3">
+        Art. 4º É permitida a realização de eventos de doação de cães e gatos em estabelecimentos devidamente legalizados.
+        \n§ 1º A feira só poderá ser realizada sob a responsabilidade de pessoa física ou jurídica, de direito público ou privado, sem fins lucrativos mantenedoras ou responsáveis por cães e gatos.
+        \n§ 2º Para identificação da entidade, associação, instituição ou pessoa promotora do evento é necesspario a existência de uma placa, em local visível, no espaço de realização do evento de doação, contendo: nome do promotor, seja pessoa física ou jurídica, CPF ou CNPJ, com respectivo telefone.
+		\n§ 3º Pet shops ou clínicas veterinárias podem promover doações de animais, desde que haja identificação do responsável pela atividade, no local de exposiçãoo dos animais, atendendo-se às exigências previstas no parágrafo anterior.
+		\n§ 4º Os animais expostos para doação devem estar devidamente esterilizados e submetidos a controle de endo e ectoparasitas, bem como submetidos ao esquema de vacinação contra a raiva e doenças espécie-específicas, conforme respectiva faixa etária, mediante atestados.\n
+        Art. 5º As doações serão regidas por contrato específico, cujas obrigações previstas, por escrito, devem contemplar os dados qualificativos do animal, do adotante e do doador, as responsabilidades do adotante, as penalidades no caso de descumprimento, a permissão de monitoramento pelo doador e as condições de bem-estar e manutenção do animal.
+        \nParágrafo único. Antes da consumação da doaçãoo e da assinatura do contrato, o potencial adotante deve ser amplamente informado e conscientizado sobre a convivência da família com um animal, noções de comportamento, expectativa de vida, provável porte do animal na fase adulta (no caso de filhotes), necessidades nutricionais e de saúde.\n
+        Art. 6º No ato da doação deve ser providenciado o RGA do animal, em nome do novo proprietário.\n
+		Art. 7º Aqueles elencados no § 1º do art. 4º podem cobrar taxa de adoção do animal, devendo para tanto fornecer ao adotante recibo especificando o valor da taxa e demais gastos.
+    </string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
