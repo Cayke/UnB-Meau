@@ -47,6 +47,11 @@ public class AdoptAdapter extends RecyclerView.Adapter {
         }
     }
 
+    public Pet getPetAtIndex(int index)
+    {
+        return pets.get(index);
+    }
+
     @Override
     public int getItemCount() {
         return pets.size();

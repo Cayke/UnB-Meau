@@ -1,119 +1,63 @@
 package com.caykeprudente.meau.Fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.caykeprudente.meau.Models.Pet;
+import com.caykeprudente.meau.MyApplication;
 import com.caykeprudente.meau.R;
+import com.squareup.picasso.Picasso;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link AnimalFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link AnimalFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class AnimalFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    Pet pet;
+    ImageView imageView;
+    TextView tvName, tvSex, tvSize, tvAge, tvLocation, tvCut, tvDewormed, tvVaccinated, tvDiseases, tvHumor, tvDonor_requirements, tvDescription;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    //private OnFragmentInteractionListener mListener;
-
-    public AnimalFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AnimalFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static AnimalFragment newInstance(String param1, String param2) {
-        AnimalFragment fragment = new AnimalFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public AnimalFragment(Pet pet) {
+        this.pet = pet;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_animal, container, false);
 
-        TextView aux;
-        aux = (TextView) view.findViewById(R.id.animal_desc);
-//        aux.setVisibility(View.GONE);
-        aux = (TextView) view.findViewById(R.id.animal_label_desc);
-//        aux.setVisibility(View.GONE);
+        tvName = (TextView) view.findViewById(R.id.animal_name);
+        tvSex = (TextView) view.findViewById(R.id.animal_sex);
+        tvSize = (TextView) view.findViewById(R.id.animal_porte);
+        tvAge = (TextView) view.findViewById(R.id.animal_age);
+        tvLocation = (TextView) view.findViewById(R.id.animal_loc);
+        tvCut = (TextView) view.findViewById(R.id.animal_castrado);
+        tvVaccinated = (TextView) view.findViewById(R.id.animal_vacinado);
+        tvDewormed = (TextView) view.findViewById(R.id.animal_vermifungado);
+        tvHumor = (TextView) view.findViewById(R.id.animal_temperamento);
+        tvDiseases = (TextView) view.findViewById(R.id.animal_doencas);
+        tvDonor_requirements = (TextView) view.findViewById(R.id.animal_exigencias);
+        tvDescription = (TextView) view.findViewById(R.id.animal_desc);
+
+        imageView = (ImageView) view.findViewById(R.id.img_animal);
+
+        bindValues();
 
         return view;
     }
 
-//    // TODO: Rename method, update argument and hook method into UI event
-//    public void onButtonPressed(Uri uri) {
-//        if (mListener != null) {
-//            mListener.onFragmentInteraction(uri);
-//        }
-//    }
+    private void bindValues()
+    {
+        Picasso.with(MyApplication.getAppContext()).load(pet.getImageResource()).resize(360,184).into(imageView);
 
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
-//
-//    @Override
-//    public void onDetach() {
-//        super.onDetach();
-//        mListener = null;
-//    }
-//
-//    /**
-//     * This interface must be implemented by activities that contain this
-//     * fragment to allow an interaction in this fragment to be communicated
-//     * to the activity and potentially other fragments contained in that
-//     * activity.
-//     * <p>
-//     * See the Android Training lesson <a href=
-//     * "http://developer.android.com/training/basics/fragments/communicating.html"
-//     * >Communicating with Other Fragments</a> for more information.
-//     */
-//    public interface OnFragmentInteractionListener {
-//        // TODO: Update argument type and name
-//        void onFragmentInteraction(Uri uri);
-//    }
+        tvName.setText(pet.getName());
+        tvSex.setText(pet.getSex());
+        tvAge.setText(pet.getAge());
+        tvSize.setText(pet.getSize());
+        tvLocation.setText(pet.getLocation());
+    }
 }

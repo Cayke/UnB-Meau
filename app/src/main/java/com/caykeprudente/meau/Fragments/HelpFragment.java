@@ -33,7 +33,7 @@ public class HelpFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(llm);
 
-        AdoptAdapter adapter = new AdoptAdapter(AdoptAdapter.InitAnimalsFrom.help);
+        final AdoptAdapter adapter = new AdoptAdapter(AdoptAdapter.InitAnimalsFrom.help);
         recyclerView.setAdapter(adapter);
 
         ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
@@ -41,7 +41,7 @@ public class HelpFragment extends Fragment {
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 if (mContext instanceof AppActivity) {
                     AppActivity mainActivity = (AppActivity) mContext;
-                    mainActivity.switchToAnimalFragment();
+                    mainActivity.switchToAnimalFragment(adapter.getPetAtIndex(position));
                 }
             }
         });

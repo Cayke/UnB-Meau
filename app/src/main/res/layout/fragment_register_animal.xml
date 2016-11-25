@@ -18,7 +18,7 @@
             android:paddingTop="16dp"
             android:paddingLeft="24dp"
             android:paddingRight="24dp"
-            android:paddingBottom="16dp" >
+            android:background="@color/lightGrayBackgroundColor">
 
             <TextView
                 android:layout_width="match_parent"
@@ -463,14 +463,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="24dp"
-                android:paddingRight="24dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginBottom="24dp">
+                android:layout_marginBottom="24dp"
+                android:gravity="center_horizontal">
+
                 <Button
+                    android:layout_width="232dp"
+                    android:layout_height="40dp"
                     android:id="@+id/register_send"
-                    style="@style/btn_choiced_option"
-                    android:text="@string/create" />
+                    android:text="@string/create"
+                    android:background="@drawable/rounded_button_yellow"
+                    />
             </LinearLayout>
 
         </LinearLayout>

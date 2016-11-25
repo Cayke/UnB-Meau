@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.caykeprudente.meau.Fragments.AnimalFragment;
 import com.caykeprudente.meau.Fragments.FragmentCreator;
+import com.caykeprudente.meau.Models.Pet;
 
 import br.liveo.interfaces.OnItemClickListener;
 import br.liveo.interfaces.OnPrepareOptionsMenuLiveo;
@@ -64,9 +65,9 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
         mHelpLiveo.add(getString(R.string.history), R.drawable.icon_story);
         mHelpLiveo.addSeparator();
 
-        mHelpLiveo.addSubHeader(getString(R.string.config));
-        mHelpLiveo.add(getString(R.string.privacity), R.drawable.icon_privacy);
-        mHelpLiveo.addSeparator();
+//        mHelpLiveo.addSubHeader(getString(R.string.config));
+//        mHelpLiveo.add(getString(R.string.privacity), R.drawable.icon_privacy);
+//        mHelpLiveo.addSeparator();
 
         //with(this, Navigation.THEME_DARK). add theme dark
         //with(this, Navigation.THEME_LIGHT). add theme light
@@ -121,8 +122,8 @@ public class AppActivity extends NavigationLiveo implements OnItemClickListener 
     };
 
 
-    public void switchToAnimalFragment() {
-        Fragment mFragment = AnimalFragment.newInstance("", "");
+    public void switchToAnimalFragment(Pet pet) {
+        Fragment mFragment = new AnimalFragment(pet);
         FragmentManager mFragmentManager = getSupportFragmentManager();
         mFragmentManager.beginTransaction().replace(R.id.container, mFragment).addToBackStack(null).commit();
     }

@@ -189,7 +189,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:maxLines="1"
-                            android:text="vermifungado"
+                            android:text="vermifugado"
                             style="@style/infoLabel"/>
                         <TextView
                             android:id="@+id/animal_vermifungado"
