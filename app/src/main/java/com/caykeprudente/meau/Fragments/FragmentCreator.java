@@ -25,6 +25,9 @@ public class FragmentCreator {
         else if (screenName.equals(MyApplication.getAppContext().getString(R.string.apadrinhar_pet)))
             return new PatronizeFragment();
 
+        else if (screenName.equals(MyApplication.getAppContext().getString(R.string.chat)))
+            return new ChatFragment();
+
         else
             return null;
     }
